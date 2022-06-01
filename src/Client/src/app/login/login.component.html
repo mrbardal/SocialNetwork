@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>
+        Login
+    </mat-card-title>
+
+    <form [formGroup]="loginForm"
+          (ngSubmit)="login()">
+        <mat-form-field class="form-field">
+            <input matInput
+                   placeholder="UserName"
+                   formControlName="userName">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <input matInput
+                   placeholder="Password"
+                   formControlName="password">
+        </mat-form-field>
+
+        <button mat-raised-button
+                [disabled]="!loginForm.valid">Login</button>
+    </form>
+</mat-card>

@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+        <button mat-icon-button
+                (click)="toggle()">
+                <mat-icon>menu</mat-icon>
+        </button>
+
+        <button mat-button
+                routerLink="/">Home</button>
+        <button mat-button
+                routerLink="/search">Search</button>
+        <button mat-button
+                routerLink="/friendships">Friendships</button>
+        <button mat-button
+                routerLink="/followers">Followers</button>
+        <button mat-button
+                routerLink="/followings">Following</button>
+
+        <span style="flex: 1 1 auto;"></span>
+
+        <button mat-button
+                routerLink="/register"
+                color="warn"
+                *ngIf="!service.isAuthenticate()">Register</button>
+        <button mat-button
+                routerLink="/login"
+                color="warn"
+                *ngIf="!service.isAuthenticate()">Login</button>
+        <button mat-button
+                (click)="service.logout()"
+                color="warn"
+                *ngIf="service.isAuthenticate()">Logout</button>
+        <button mat-button
+                routerLink="/profile"
+                color="warn"
+                *ngIf="service.isAuthenticate()">{{service.userName}}</button>
+</mat-toolbar>

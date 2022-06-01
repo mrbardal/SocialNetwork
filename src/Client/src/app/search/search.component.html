@@ -1,0 +1,22 @@
+<mat-form-field>
+    <input type="text"
+           matInput
+           [formControl]="filter"
+           (keydown.enter)="filterKeyDown($event)"
+           placeholder="Search ...">
+</mat-form-field>
+<button mat-flat-button
+        class="ml2"
+        (click)="applyFilter()"
+        color="primary">
+    <mat-icon>search</mat-icon>
+</button>
+
+<div>
+    <p *ngFor="let name of result.userNames">
+        <button mat-button
+                color="accent"
+                [disabled]="name == userService.userName!"
+                routerLink="/friendship/{{name}}">{{name}}</button>
+    </p>
+</div>

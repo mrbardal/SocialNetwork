@@ -1,0 +1,50 @@
+<!-- <app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer> -->
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <!-- <img class="avatar mat-elevation-z8"
+         width="20%"
+         src="assets/img/Logo.jpg" /> -->
+
+    <h3 class="name">SocialApp</h3>
+    <p class="designation">Network Social</p>
+
+    <mat-divider></mat-divider>
+    <button mat-button
+            class="menu-button"
+            routerLink="/">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-button
+            class="menu-button"
+            routerLink="/profile">
+      <mat-icon>apps</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button mat-button
+            class="menu-button">
+      <mat-icon>help</mat-icon>
+      <span>Help</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button
+            (click)="service.logout()"
+            class="menu-button">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

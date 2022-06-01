@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>
+        Create new user
+    </mat-card-title>
+
+    <form [formGroup]="registerForm"
+          (ngSubmit)="register()">
+        <mat-form-field class="form-field">
+            <input matInput
+                   placeholder="UserName"
+                   formControlName="userName">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <input type="password"
+                   matInput
+                   placeholder="Password"
+                   formControlName="password">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <input type="password"
+                   matInput
+                   placeholder="Confirm Password"
+                   formControlName="confirmPassword">
+        </mat-form-field>
+
+        <button mat-raised-button
+                [disabled]="!registerForm.valid">Create User</button>
+    </form>
+</mat-card>
