@@ -1,5 +1,6 @@
 
 using SocialNetwork.Application;
+using SocialNetwork.Infrastructure.Identity;
 using SocialNetwork.Infrastructure.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);

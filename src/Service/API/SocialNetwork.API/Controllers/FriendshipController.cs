@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.API.Models.FriendshipDtos;
 using SocialNetwork.Domain.Aggregates.FriendshipAggregate;
@@ -6,6 +7,7 @@ using SocialNetwork.Infrastructure.Persistance.Core;
 
 namespace SocialNetwork.Controllers;
 
+//[Authorize]
 [ApiController]
 [Route("friendships")]
 public class FriendshipController : ControllerBase

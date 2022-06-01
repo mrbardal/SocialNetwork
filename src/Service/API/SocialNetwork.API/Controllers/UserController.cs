@@ -1,5 +1,6 @@
 using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.API.Models.UserDtos;
 using SocialNetwork.Application.Featuers.UserFeature.Commands.Register;
@@ -8,6 +9,7 @@ using SocialNetwork.Application.Featuers.UserFeature.Queries.Search;
 
 namespace SocialNetwork.Controllers;
 
+//[AllowAnonymous]
 [ApiController]
 [Route("users")]
 public class UserController : ControllerBase

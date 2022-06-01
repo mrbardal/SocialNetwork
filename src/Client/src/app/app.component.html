@@ -35,6 +35,7 @@
 
     <button mat-button
             *ngIf="service.isAuthenticate()"
+            routerLink="/login"
             (click)="service.logout();sidenav.toggle();"
             class="menu-button">
       <mat-icon>logout</mat-icon>
