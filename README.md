@@ -24,12 +24,23 @@ run: dotnet ef database update
 after database creating
 run: dotnet run
 
-Swagger docimentation 
+Swagger documentation 
 
-![alt text](http://url/to/img.png)
+<img src="https://github.com/mrbardal/SocialNetwork/blob/main/img/swagger.png" width="100%"/>
 
 ## Frontend
 
 Frontend developed with Angular 13 and Material Components
+
+for launching frontend
+execute command prompt
+set current path to C:\Code\SocialNetwork\src\Client
+run: ng s
+after building 
+launch browser and type http://localhost:4200
+
+some executing images
+
+
 
 ```
