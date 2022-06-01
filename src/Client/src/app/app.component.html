@@ -34,10 +34,19 @@
     <mat-divider></mat-divider>
 
     <button mat-button
-            (click)="service.logout()"
+            *ngIf="service.isAuthenticate()"
+            (click)="service.logout();sidenav.toggle();"
             class="menu-button">
       <mat-icon>logout</mat-icon>
       <span>Logout</span>
+    </button>
+    <button mat-button
+            *ngIf="!service.isAuthenticate()"
+            (click)="sidenav.toggle();"
+            routerLink="/login"
+            class="menu-button">
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>

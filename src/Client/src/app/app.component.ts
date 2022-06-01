@@ -7,8 +7,6 @@ import { UserService } from './services/user.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  constructor(public service: UserService) {
-    console.log(this.service.userName);
-  }
+
+  constructor(public service: UserService) { }
 }

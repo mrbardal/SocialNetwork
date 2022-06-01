@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Friendship } from '../models/friendship.model';
 import { FriendshipService } from '../services/friendships.service';
 import { UserService } from '../services/user.service';
@@ -16,6 +17,7 @@ export class FriendshipComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private toastr: ToastrService,
     private friendService: FriendshipService,
     public userService: UserService) {
 
@@ -41,6 +43,8 @@ export class FriendshipComponent implements OnInit {
   request() {
     this.friendService.addFriendship(
       new Friendship(this.userService.userName!, this.addressee!, 1)).subscribe(() => {
+        this.toastr.success("Add request successfully!", "Request");
+
         this.load();
       });
   }

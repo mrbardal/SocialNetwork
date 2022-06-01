@@ -1,5 +1,5 @@
 <div>
-    <p *ngIf="friendships.length == 0">There is no Friendship request!</p>
+    <p *ngIf="friendships.length == 0">There are no friendship request awaiting confirm</p>
     <p *ngFor="let friendship of friendships">
         {{friendship}}
         <button mat-button
