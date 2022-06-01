@@ -41,6 +41,6 @@ launch browser and type http://localhost:4200
 
 some executing images
 
-
-
-```
+<img src="https://github.com/mrbardal/SocialNetwork/blob/main/img/angular1.png" width="100%"/>
+<img src="https://github.com/mrbardal/SocialNetwork/blob/main/img/angular2.png" width="100%"/>
+<img src="https://github.com/mrbardal/SocialNetwork/blob/main/img/angular3.png" width="100%"/>
