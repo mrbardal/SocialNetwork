@@ -17,6 +17,16 @@ Backend developed with ASP.NET Core 6.0
 - In `get: friendships/followers` for retrieving list of followers
 - In `get: friendships/followings` for retrieving list of followings
 
+for launching backend
+execute command prompt
+set current path to C:\Code\SocialNetwork\src\Service\Infrastructure\SocialNetwork.Infrastructure.Persistance.Migrations
+run: dotnet ef database update
+after database creating
+run: dotnet run
+
+Swagger docimentation 
+
+![alt text](http://url/to/img.png)
 
 ## Frontend
 

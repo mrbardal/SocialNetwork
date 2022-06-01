@@ -7,12 +7,16 @@
         <button mat-button
                 routerLink="/">Home</button>
         <button mat-button
+                *ngIf="service.isAuthenticate()"
                 routerLink="/search">Search</button>
         <button mat-button
+                *ngIf="service.isAuthenticate()"
                 routerLink="/friendships">Friendships</button>
         <button mat-button
+                *ngIf="service.isAuthenticate()"
                 routerLink="/followers">Followers</button>
         <button mat-button
+                *ngIf="service.isAuthenticate()"
                 routerLink="/followings">Following</button>
 
         <span style="flex: 1 1 auto;"></span>
